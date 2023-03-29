@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
 import Contacto from './components/contacto';
 import Pokemon from './components/pokemon';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/contacto' element={<Contacto />} />
         <Route path='/pokemon' element={<Pokemon />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
