@@ -21,11 +21,17 @@ function Pokemon() {
   }
 
   return (
-    <div>
-      <input type='number' onChange={valorInput} />
-      <button onClick={() => addNumberToList(input)}>agregar pokemon</button>
-      <button onClick={() => setNumbers(vacio)}>Borrar pokemons</button>
-
+    <div className={styles.pokemonDiv}>
+      <div className={styles.pokemonContentDiv}>
+        <h2 className={styles.h2}>Busca tu pokemon</h2>
+        <input type='number' onChange={valorInput} className={styles.input} />
+        <button onClick={() => addNumberToList(input)} className={styles.btn}>
+          agrega un pokemon
+        </button>
+        <button onClick={() => setNumbers(vacio)} className={styles.btn}>
+          Borrar pokemons
+        </button>
+      </div>
       <div className={styles.pokemonContainer}>
         {numbers.map((id) => (
           <PokemonCard key={id} id={id} />
